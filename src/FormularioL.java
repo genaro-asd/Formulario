@@ -90,8 +90,18 @@ public class FormularioL extends javax.swing.JFrame {
         );
 
         jOcultar.setText("Ocultar");
+        jOcultar.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                hide(evt);
+            }
+        });
 
         jVer.setText("Ver");
+        jVer.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jVerMouseClicked(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -154,6 +164,14 @@ public class FormularioL extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void hide(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_hide
+        jContraseña.setEchoChar('*');
+    }//GEN-LAST:event_hide
+
+    private void jVerMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jVerMouseClicked
+        jContraseña.setEchoChar((char)0);
+    }//GEN-LAST:event_jVerMouseClicked
 
     /**
      * @param args the command line arguments
