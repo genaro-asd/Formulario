@@ -52,6 +52,7 @@ public class FormularioL extends javax.swing.JFrame {
         jContraseña.setText("jPasswordField1");
 
         jVerificar.setText("Verificar");
+        jVerificar.addActionListener(this::jVerificarActionPerformed);
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -154,6 +155,37 @@ public class FormularioL extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jVerificarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jVerificarActionPerformed
+
+        String usuario = jUsuario.getText().trim();
+        String password = jContraseña.getText();
+
+        if (usuario.equals("alumno@ulp.edu.ar") && password.equals("12345678")) {
+            javax.swing.JOptionPane.showMessageDialog(
+                    this,
+                    "¡Bienvenido/a al sistema!",
+                    "Mensaje de Bienvenida",
+                    javax.swing.JOptionPane.INFORMATION_MESSAGE
+            );
+
+            jUsuario.setText("");
+            jContraseña.setText("");
+
+        } else {
+            javax.swing.JOptionPane.showMessageDialog(
+                    this,
+                    "Usuario y/o contraseña incorrectos",
+                    "Error",
+                    javax.swing.JOptionPane.ERROR_MESSAGE
+            );
+            jUsuario.setText("");
+            jContraseña.setText("");
+
+        }
+
+
+    }//GEN-LAST:event_jVerificarActionPerformed
 
     /**
      * @param args the command line arguments
