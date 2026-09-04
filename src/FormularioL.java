@@ -98,6 +98,7 @@ public class FormularioL extends javax.swing.JFrame {
                 hide(evt);
             }
         });
+        jOcultar.addActionListener(this::jOcultarActionPerformed);
 
         jVer.setText("Ver");
         jVer.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -192,7 +193,6 @@ public class FormularioL extends javax.swing.JFrame {
                     javax.swing.JOptionPane.ERROR_MESSAGE
             );
             jUsuario.setText("");
-            jContraseña.setText("");
 
         }
 
@@ -205,6 +205,10 @@ public class FormularioL extends javax.swing.JFrame {
     private void jVerMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jVerMouseClicked
         jContraseña.setEchoChar((char)0);
     }//GEN-LAST:event_jVerMouseClicked
+
+    private void jOcultarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jOcultarActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jOcultarActionPerformed
 
     /**
      * @param args the command line arguments
